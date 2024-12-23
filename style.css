@@ -1,0 +1,305 @@
+/* Allgemeines Styling */
+body {
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: white;
+    text-align: center;
+}
+
+/* Eigene Schriftart */
+@font-face {
+    font-family: 'holiday';
+    src: url('fonts/HolidayFree.otf') format('opentype');
+}
+
+h1{
+    font-family: 'holiday';
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: center; /* Zentriert die Elemente horizontal */
+    align-items: center; /* Zentriert die Elemente vertikal */
+    gap: 10px; /* Abstand zwischen den Bildern und dem Text */
+    padding: 30px 20px; /* Weniger Padding */
+}
+
+#heart-header, #beepot-header {
+    width: 120px; /* Kleinere Größe für die Bilder */
+    height: auto;
+    margin: 0; /* Entferne zusätzliche Abstände */
+}
+
+.title {
+    line-height: 1.1; /* Engerer Zeilenabstand */
+    text-align: center;
+}
+
+.title h1 {
+    color: #f8a01c;
+    font-family: 'holiday', sans-serif;
+    font-size: 2.8rem;
+    margin: 0; /* Kein zusätzlicher Abstand */
+}
+
+/* Tageszähler */
+#days {
+    font-size: 1.2rem;
+    margin-top: 10px; /* Geringerer Abstand nach oben */
+    color: #f8a01c;
+}
+
+/* Section "We have been together" */
+#together-section {
+    background-color: #f8a01c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: #000;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.together-text h2 {
+    font-family: 'holiday', sans-serif;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.together-text p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.bee img {
+    width: 300px; /* Größe der Bienenbilder */
+    height: auto;
+}
+
+.bee {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Section heartchain */
+#heartchain{
+    width: 900px;
+    height: auto;
+}
+
+/* Responsive Anpassung */
+@media (max-width: 1030px) {
+    #together-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .bee img {
+        width: 300px; /* Kleinere Bilder auf mobilen Geräten */
+    }
+
+    .together-text h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Bucket-Liste */
+/* Bucketlist Styling */
+#bucketlist-section {
+    background-color: #f8a01c;
+    padding: 20px;
+    text-align: center;
+    color: #000000;
+}
+
+.bucketlist-title {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-family: 'holiday', sans-serif;
+}
+
+#bucketlist {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    text-align: left;
+}
+
+#bucketlist li {
+    font-size: 1.5rem;
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#bucketlist li.done {
+    text-decoration: line-through;
+    color: rgb(0, 0, 0);
+    font-style: italic;
+}
+
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+}
+
+/* Alben Slider */
+#albums-section {
+    background-color: #f8a01c;
+    padding: 20px;
+    color: #000;
+    text-align: center;
+    overflow: hidden; /* Verhindert das Scrollen außerhalb des Containers */
+}
+
+.albums-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: 'holiday', sans-serif;
+}
+
+.albums-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Verhindert das Scrollen außerhalb des Containers */
+}
+
+.albums-grid {
+    display: flex;
+    gap: 15px;
+    overflow-x: scroll;
+    scroll-behavior: smooth; /* Smooth scrolling */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    padding: 10px;
+    white-space: nowrap; /* Wichtige Eigenschaft für Slider */
+}
+
+.albums-grid::-webkit-scrollbar {
+    display: none; /* Versteckt den Standard-Scrollbar */
+}
+
+.album {
+    background-color: black;
+    color: white;
+    width: 150px; /* Fixierte Breite */
+    height: 150px; /* Fixierte Höhe */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    flex-shrink: 0; /* Verhindert das Skalieren */
+}
+
+.arrow {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #ffffff;
+    position: absolute;
+    z-index: 2;
+    height: 100%;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.arrow:hover {
+    opacity: 1;
+}
+
+.arrow-left {
+    left: 0;
+}
+
+.arrow-right {
+    right: 0;
+}
+
+/* Versteckt Pfeile standardmäßig */
+.arrow.hidden {
+    display: none;
+}
+
+
+
+
+/* Responsive Anpassungen */
+@media (max-width: 600px) {
+    #heart-header, #beepot-header {
+        width: 80px; /* Kleinere Bilder auf mobilen Geräten */
+    }
+
+    .title h1 {
+        font-size: 2.2rem; /* Kleinere Schriftgröße */
+    }
+}
+
+@media (max-width: 480px) {
+    .title h1 {
+        font-size: 2rem; /* Noch kleinere Schrift für sehr kleine Geräte */
+    }
+
+    #heart-header, #beepot-header {
+        width: 60px;
+    }
+}
+
+/* Responsive heartchains */
+#heartchain {
+    width: 900px; /* Default size for larger screens */
+    height: auto;
+    margin: 20px auto; /* Center it */
+}
+
+@media (max-width: 1000px) {
+    #heartchain {
+        width: 600px; /* Adjust for tablets */
+    }
+}
+
+@media (max-width: 710px) {
+    #heartchain {
+        width: 380px; /* Adjust for mobile devices */
+    }
+}
+
+#hex-code {
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+    word-break: break-all; /* Ensure long hex codes break to fit */
+}
+
+@media (max-width: 410px) {
+    #footer-section {
+        background-color: black;
+        color: white;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 10px; /* Adjust font size for tablets */
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    #footer-section {
+        font-size: 0.9rem; /* Smaller font size for mobiles */
+    }
+}
+

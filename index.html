@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salex</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    
+
+
+</head>
+<body>
+    <header>
+        <img id="heart-header" src="assets/heart.png" alt="heart">
+        <div class="title">
+            <h1>Salex'</h1>
+            <h1>Honigwabe</h1>
+        </div>
+        <img id="beepot-header" src="assets/beepot.png" alt="honey pot with heart">
+    </header>
+
+    <section id="together-section">
+        <div class="bee bee-left">
+            <img src="assets/bee-binary.png" alt="binary bee">
+        </div>
+    
+        <div class="together-text">
+            <h2>We have been together:</h2>
+             <p id="together-date"></p>
+             <script src="scripts/togetherDate.js"></script>
+        </div>
+    
+        <div class="bee bee-right">
+            <img src="assets/bee-date.png" alt="date bee">
+        </div>
+    </section>
+
+    <section>
+        <img id="heartchain" src="assets/heartchain.png" alt="">
+    </section>
+
+    <section id="bucketlist-section">
+        <h1 class="bucketlist-title">Bucketlist:</h1>
+        <ul id="bucketlist"></ul>
+        <button id="add-task-button" class="add-task">+</button>
+        <script src="scripts/bucketlist.js"></script>
+    </section>
+    
+    <section>
+        <img id="heartchain" src="assets/heartchain.png" alt="">
+    </section>
+
+    <section id="albums-section">
+        <h1 class="albums-title">Albums:</h1>
+        <div class="albums-container">
+            <button class="arrow arrow-left hidden">&lt;</button>
+            <div class="albums-grid" id="albums-grid"></div>
+            <button class="arrow arrow-right hidden">&gt;</button>
+        </div>
+        <script src="scripts/albums.js"></script>
+
+    </section>
+
+    <section>
+        <img id="heartchain" src="assets/heartchain.png" alt="">
+    </section>
+
+    <footer id="footer-section">
+        <p id="hex-code">49206c6f766520796f7520736f206d75636821</p>
+        <script src="scripts/footer.js"></script>
+    </footer>
+    
+
+
+</body>
+</html>
